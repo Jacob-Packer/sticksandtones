@@ -5,7 +5,6 @@ Fonts are separated by a | */
 
 :root {
   /* change the values below to your colors from your palette */
-  /* remember to add linear gradients to background colors */
   --primary-color: #E1E1D7   ;
   --secondary-color: #1889E6 ; 
   --tertiary-color: #F7CCD3;
