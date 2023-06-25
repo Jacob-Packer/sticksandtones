@@ -35,22 +35,32 @@ header {
 header > h1, header > h2 {
   color: var(--headline-color-on-color);
 }
-.header-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 1fr 1fr; 
-}
 nav {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr 1fr;
 }
-ul {
-  list-style-type: none;
-}
 .map-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-item {
+  display: inline;
+}
+#background-image {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  width: 100%;
+  z-index: 1;
+}
+#tour-map {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  width: 100px;
+  z-index: 2;
+}
+#side {
+  grid-column: 3/4;
 }
 .container {
 display: grid;
