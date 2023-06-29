@@ -9,21 +9,92 @@
 </head>
 <body>
     <header>
-        <img src="images/logo.png" class="logo" alt="logo">
         <nav>
-            <h3>Compassion Tour Home Page</h3>
-            <a href="about.html">About Us</a>
+            <img src="images/logo.png" class="logo" alt="logo">
+            <h2 class="grid-item header-title">Compassion Tour Home Page</h2>
+            <a href="about.html" class="grid-item header1">About Us</a>
             <!-- Links under this tab (ALL CAPS): Mission, Bios, Contact Us, SticksandTones, PRESS PHOTOS, DONATE -->
-            <a>Q&A</a>
-            <a href="booking.html">Booking</a>
+            <a class="grid-item header2">Q&A</a>
+            <a href="booking.html" class="grid-item header3">Booking</a>
             <!-- PRICES, DATES, REFERALLS, MAP -->
         </nav>
     </header>
     
     <div class="map-grid">
-        <img id="background-image grid-item" src="images/piano.optimize.jpg" alt="piano">
-        <img id="tour-map grid-item" src="images/compassion_tour_map_locations (2).png" alt="map of tour">
-        <div id="side grid-item">
+        <img id="background-image" class="grid-item" src="images/piano.optimize.jpg" alt="piano">
+        <img id="tour-map" class="grid-item" src="images/compassion_tour_map_locations2.png" alt="map of tour">
+        <div id="side" class="grid-item">
+            <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+
+    <!-- Tabs: 1)What? 2)Where? (What? will be the current description. Where? will be the legend for A,B,C... with the date.)-->
+<h2>Compassion Tour</h2> 
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+
+   
+</body>
+</html> 
+
             <h4>What is the Compassion Tour?</h4>
             <p>Would you like to bring more music to your life and community? Let me introduce you to Henry and Maria Flurry -professional musicians touring the western states this summer in an effort to raise funds for the needy by providing a fund-raising opportunity (a concert) for religious congregations. They have successfully toured and performed before, and you can find out more about their past accomplishments, as well as more information about THIS summer's tour on their website: <a href="https://sticksandtones.com">Sticks and Tones Website</a>. 
             Henry and Maria flurry offer the compassion Tour as a way to raise funds for those in need. As they travel across the western states, congregations are able to invite their community to join the musical performances.</p>
@@ -47,4 +118,19 @@
         <p>2023&copy;</p>
     </footer>
 </body>
+<script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+</script>
 </html>
