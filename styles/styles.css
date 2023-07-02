@@ -12,7 +12,8 @@
   --accent1-color: #001427;
   --accent2-color: #BF0603;
   --gradient1: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--tertiary-color) 92%);
-
+  --gradient2: radial-gradient(var(--primary-color), var(--tertiary-color));
+  
   /* change the values below to your chosen font(s) */
   --heading-font: "Concert One", "Times New Roman", "serif";
   --paragraph-font: "Geologica", Helvetica, sans-serif;
@@ -21,7 +22,7 @@
   --headline-color-on-white: var(--secondary-color);  /* headlines on a white background */ 
   --headline-color-on-color: var(--accent1-color); /* headlines on a colored background */ 
   --paragraph-color-on-white: black; /* paragraph text on a white background */ 
-  --paragraph-color-on-color: var(--tertiary-color); /* paragraph text on a colored background */ 
+  --paragraph-color-on-color: black; /* paragraph text on a colored background */ 
   --paragraph-background-color: var(--tertiary-color)  ;
   --nav-link-color:  var(--accent1-color);
   --nav-background-color: var(--primary-color);
@@ -32,7 +33,7 @@ body {
   font-family: var(--paragraph-font);
   max-width: 1600px;
   margin: 0 auto;
-  padding: 4em;
+  padding: 0;
   font-size: 18px;
   text-align: center;
   background-color: var(--primary-color);
@@ -70,16 +71,28 @@ a {
   grid-row: 1/2;
 }
 .map-grid {
+  margin: 20px 0px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-image: url("images/compassion_tour_map_locations2.png");
-  
+  grid-template-rows: 700px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-image: url("/images/piano.optimize.jpg");
+  gap: 10px;
 }
+/* p.map-grid::before {
+  opacity: 0.5;
+} */
 .grid-item {
   display: inline;
   text-align: center;
   justify-self: center;
   align-self: auto;
+  overflow: auto;
+}
+.map-grid .grid-item {
+  background-color: rgba(210, 210, 216, 0.45);
+
 }
 p {
   font-family: var(--paragraph-font);
@@ -103,34 +116,40 @@ p {
   grid-row: 1/2;
   width: 100%;
   z-index: 1;
+  opacity: 0.5;
 }
 #tour-map {
-  margin: 10px;
+  margin: 10px 10px 10px 20px;
   grid-column: 1/2;
   grid-row: 1/2;
   width: 100%;
   z-index: 2;
   overflow: hidden;
+  border: 2px solid #001427;
+  box-shadow: #001427;
 }
 #side {
   grid-column: 2/3;
   grid-row: 1/2;
   z-index: 2;
-  background-color: #ccc rgba(34, 33, 81, 0.95);
+  max-width: 100%;
+  min-width: 100%;
 }
 
 
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid var(--accent1-color);
-  background: var(--gradient1);
-  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
-  background-color: inherit;
+  background-image: var(--gradient2);
+  margin: 10px;
+  border-radius: 10px;
   float: left;
   border: none;
   outline: none;
@@ -139,22 +158,27 @@ p {
   transition: 0.3s;
   font-size: 17px;
 }
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
 /* Create an active/current tablink class */
 .tab button.active {
   background-color: #ccc;
 }
 
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: black;
+  
+  color: var(--secondary-color);
+  background-image: black;
+  /* background: var(--gradient1);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; */
+}
+
+
 /* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
   border-top: none;
 }
 
@@ -184,4 +208,27 @@ footer {
   text-align: center;
   color: var(--headline-color-on-color);
   background-image: var(--gradient1);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 900px) {
+  
+  .map-grid {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-image: none;
+  }
+  .grid-item {
+    display: block;
+  }
+  #tour-map {
+    margin: 0 auto;
+    border: none;
+  }
+  nav a, header a {
+    display: block;
+  }
+
 }
