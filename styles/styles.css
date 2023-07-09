@@ -175,13 +175,9 @@ p {
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: black;
-  
+  background: black;
   color: var(--secondary-color);
-  background-image: black;
-  /* background: var(--gradient1);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text; */
+  font-size: 1.1em;
 }
 
 
