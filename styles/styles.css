@@ -178,6 +178,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 #contact-grid > * {
   align-self: center;
@@ -190,10 +191,16 @@ p {
 #top-blurb {
   grid-column: 2/3;
   grid-row: 1/2;
+  background: #f7ccd38c;
+  border-radius: 7px;
+  box-shadow: 5px 5px 10px rgba(27, 29, 30, .5);
 }
 #bottom-blurb {
   grid-column: 2/3;
   grid-row: 2/3;
+  background: #f7ccd38c;
+  border-radius: 7px;
+  box-shadow: 5px 5px 10px rgba(27, 29, 30, .5);
 }
 /* Style the buttons inside the tab */
 .tab button {
