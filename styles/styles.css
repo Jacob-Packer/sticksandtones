@@ -269,10 +269,13 @@ place-items: center;
   grid-column: 1/4;
   grid-row: 1/2;
   width: 100%;
+  max-width: max-content;
   opacity: 0.5;
   z-index: 1;
   height: 300px;
   object-fit: cover;
+  margin: 0 auto;
+  padding: 10px;
 }
 #contact-info {
   margin: 15px;
