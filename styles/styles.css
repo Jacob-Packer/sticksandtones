@@ -75,7 +75,6 @@ nav {
   border-radius: 3px;
   height: fit-content;
   overflow: auto;
-  clip: border-box;
 }
 .transform-link:hover {
   background-color: black;
