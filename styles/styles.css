@@ -75,6 +75,7 @@ nav {
   border-radius: 3px;
   height: fit-content;
   overflow: auto;
+  clip: border-box;
 }
 .transform-link:hover {
   background-color: black;
@@ -173,10 +174,20 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 5%;
 }
+#booking-grid {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 40px;
+}
+#booking-grid > * {
+  align-self: center;
+}
 #contact-grid {
   margin: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  
   grid-template-columns: 1fr 1fr;
   gap: 40px;
 }
@@ -187,6 +198,58 @@ p {
   grid-column: 1/2;
   grid-row: 1/3;
   width: 100%;
+}
+#booking-grid button {
+  background-image: var(--gradient2);
+  margin: 10px;
+  border-radius: 10px;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+#book-button {
+  background-image: var(--gradient2);
+  margin: 10px;
+  border-radius: 10px;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+#booking-grid button:hover {
+  background: black;
+  color: var(--secondary-color);
+  font-size: 1.1em;
+}
+.booking-column {
+  width: 90%;
+  background: #f7ccd38c;
+  border-radius: 7px;
+  box-shadow: 5px 5px 10px rgba(27, 29, 30, .5);
+  margin: 0 auto;
+}
+#guitar {
+  margin-top: 20px;
+  border-radius: 7px;
+  width: 90%;
+  margin-top: 20px;
+  margin: 0 auto;
+}
+#booking-left-bottom-column {
+  grid-area: 2/1/3/2;
+}
+#booking-left-top-column {
+  grid-area: 1/1/2/2;
+}
+#booking-right-column {
+  grid-area: 1/2/3/3;
 }
 .right-side-contact {
   margin-left: 50px;
@@ -261,6 +324,11 @@ place-items: center;
     box-shadow: 1px 1px 0 1px #1212e1, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
     54px 54px 28px -10px rgba(34, 33, 81, 0.15);
 }
+#bottom-cluster {
+  grid-area: 3/1/4/3;
+  margin: 0 auto;
+  text-align: center;
+}
 #bottom-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -322,6 +390,9 @@ footer {
   }
   #bottom-grid {
     display: inline;
+  }
+  #booking-grid {
+    display: block;
   }
 
   /* css rules for the scrollbar */
