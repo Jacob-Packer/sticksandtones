@@ -1,0 +1,115 @@
+/* import fonts */
+/* make a root rule for colors, font colors, and font families */
+html { 
+    width: 100%;
+    margin: 0;
+  /* background: url(https://images.unsplash.com/photo-1669937911016-6ad7483a2415?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#intro {
+    align-content: center;
+    justify-content: center;
+
+    background: url(https://images.unsplash.com/photo-1669937911016-6ad7483a2415?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;      
+}
+#intro-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    grid-auto-rows: 100px;
+    gap: 10px;
+}
+#background-image {
+    grid-area: 1/1/4/4;
+    z-index: 1;
+    object-fit: fill;
+    
+    
+}
+.grid-item {
+    z-index: 2;
+    align-self: auto;
+    justify-self: auto;
+    
+    /* have the video play silently on hover, and on click with noise
+    YouTube does this, where you hover over a video to see a silent preview of it*/
+}
+#video1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#video2 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+#textbox {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: bisque;
+    text-align: center;
+    height: 40%;
+    align-self: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#hero-title {
+    text-decoration: solid;
+    color: rgb(80, 49, 232);
+}
+#video3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+#video4 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+#down-arrow {
+    margin: 0 auto;
+}
+
+#dates {
+    align-content: center;
+    justify-content: center;
+
+    background: url(https://images.unsplash.com/photo-1532295039064-229629db1073?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXJpem9uYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;    
+}
+#dates-title {
+    color: white;
+    font-size: 2em;
+    align-self: center;
+    justify-self: autp;
+    text-align: center;
+    /* background: rgba(255, 255, 255, 0.4); */
+}
+#dates-grid-container {
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    background: rgba(0, 0, 0, 0.6);
+}
+h3 {
+    font-size: 2em;
+    color: red;
+}
+ul {
+    color: white;
+    font-size: 1.5em;
+    grid-column-start: 2;
+    width: fit-content;
+}

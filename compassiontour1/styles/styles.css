@@ -1,0 +1,415 @@
+/* Sticks and Tones Compassion Tour */
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Geologica&display=swap');
+
+:root {
+  /* change the values below to your colors from your palette */
+  /* remember to add linear gradients to background colors */
+  --primary-color: #E1E1D7   ;
+  --secondary-color: #1889E6 ; 
+  --tertiary-color: #F7CCD3;
+  --fourth-color: #B7EC8F;
+  /* --accent1-color: #F5DB57; */
+  --accent1-color: #001427;
+  --accent2-color: #BF0603;
+  --gradient1: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--tertiary-color) 92%);
+  --gradient2: radial-gradient(var(--primary-color), var(--tertiary-color));
+  --gradient3: radial-gradient(var(--secondary-color), white 105%);
+  
+  /* change the values below to your chosen font(s) */
+  --heading-font: "Concert One", "Times New Roman", "serif";
+  --paragraph-font: "Geologica", Helvetica, sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: var(--secondary-color);  /* headlines on a white background */ 
+  --headline-color-on-color: var(--accent1-color); /* headlines on a colored background */ 
+  --paragraph-color-on-white: black; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: black; /* paragraph text on a colored background */ 
+  --paragraph-background-color: var(--tertiary-color)  ;
+  --nav-link-color:  var(--accent1-color);
+  --nav-background-color: var(--primary-color);
+  --nav-hover-link-color: var(--accent1-color);
+  --nav-hover-background-color: var(--accent2-color);
+}
+body {
+  font-family: var(--paragraph-font);
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 18px;
+  text-align: center;
+  background-color: var(--primary-color);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--accent1-color);
+}
+img {
+  box-shadow: 5px 5px 10px rgba(27, 29, 30, .5);
+}
+header {
+  padding: 1em;
+  text-align: center;
+  color: var(--headline-color-on-color);
+  background-image: var(--gradient1);
+  height: 200px;
+  box-shadow: 5px 5px 10px rgba(27, 29, 30, .5);
+}
+header > h1, header > h2 {
+  color: var(--headline-color-on-color);
+}
+nav {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+.logo {
+  width: 100%;
+  grid-row: 1/3;
+  grid-column: 1/3;
+  box-shadow: none;
+}
+.transform-link {
+  font-size: 1.2em;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 3px;
+  height: fit-content;
+  overflow: auto;
+}
+.transform-link:hover {
+  background-color: black;
+  color: var(--tertiary-color);
+  transform: scale(1.1);
+  transition:all 1s;
+}
+.header-title {
+  grid-column: 4/6;
+  grid-row: 1/2;
+}
+#contact-main {
+  margin: 0 auto;
+  max-width: 1400px;
+  margin-bottom: 20px;
+}
+.map-grid {
+  margin: 20px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-image: url("/images/piano.optimize.jpg");
+  gap: 10px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.grid-item {
+  display: inline;
+  text-align: center;
+  justify-self: center;
+  align-self: auto;
+  overflow: auto;
+  height: fit-content;
+}
+#grid-item-title {
+  display: inline;
+  text-align: center;
+  justify-self: center;
+  align-self: auto;
+  height: fit-content;
+  overflow: hidden;
+  text-decoration: none;
+}
+#grid-item-title:hover {
+  text-decoration: underline;
+}
+.map-grid .grid-item {
+  background-color: rgba(210, 210, 216, 0.45);
+}
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-color);
+  padding: 1em;
+}
+.header1 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.header2 {
+  grid-column: 4/6;
+  grid-row: 2/3;
+}
+.header3 {
+  grid-column: 6/7;
+  grid-row: 2/3;
+}
+#background-image {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  width: 100%;
+  z-index: 1;
+  opacity: 0.5;
+}
+#tour-map {
+  margin: 10px 10px 10px 20px;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 100%;
+  z-index: 2;
+  overflow: hidden;
+  border: 2px solid black;
+}
+#side {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  z-index: 2;
+  max-width: 100%;
+  min-width: 100%;
+}
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+}
+#booking-grid {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 40px;
+}
+#booking-grid > * {
+  align-self: center;
+}
+#contact-grid {
+  margin: 10px;
+  display: grid;
+  
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+#contact-grid > * {
+  align-self: center;
+}
+#about-photo {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  width: 100%;
+}
+#booking-grid button {
+  background-image: var(--gradient2);
+  margin: 10px;
+  border-radius: 10px;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+#book-button {
+  background-image: var(--gradient2);
+  margin: 10px;
+  border-radius: 10px;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+#booking-grid button:hover {
+  background: black;
+  color: var(--secondary-color);
+  font-size: 1.1em;
+}
+.booking-column {
+  width: 90%;
+  background: #f7ccd38c;
+  border-radius: 7px;
+  box-shadow: 5px 5px 10px rgba(27, 29, 30, .5);
+  margin: 0 auto;
+}
+#guitar {
+  border-radius: 7px;
+  width: 90%;
+  margin-top: 20px;
+  margin: 0 auto;
+}
+#booking-left-bottom-column {
+  grid-area: 2/1/3/2;
+}
+#booking-left-top-column {
+  grid-area: 1/1/2/2;
+}
+#booking-right-column {
+  grid-area: 1/2/3/3;
+}
+.right-side-contact {
+  margin-left: 50px;
+  width: 90%;
+  background: #f7ccd38c;
+  border-radius: 7px;
+  box-shadow: 5px 5px 10px rgba(27, 29, 30, .5);
+}
+#top-blurb {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+#bottom-blurb {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+/* Style the buttons inside the tab */
+.tab button {
+  background-image: var(--gradient2);
+  margin: 10px;
+  border-radius: 10px;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background: black;
+  color: var(--secondary-color);
+  font-size: 1.1em;
+}
+
+
+/* Style the tab content */
+.tabcontent {
+  /* display: none; */
+  padding: 6px 12px;
+  border-top: none;
+}
+
+#Where{
+  display: none;
+}
+
+.container {
+display: grid;
+grid-template-columns: 1fr;
+place-items: center;
+}
+.hover {
+  height: 30vmin;
+  width: 25vmin;
+  transform: rotateX(51deg) rotateZ(43deg);
+  transform-style: preserve-3d;
+  border-radius: 32px;
+  box-shadow: 1px 1px 0 1px red, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+    28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+  transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
+}
+
+.hover:hover {
+    transform: translate3d(0px, -16px, 0px) rotateX(51deg) rotateZ(43deg);
+    box-shadow: 1px 1px 0 1px #1212e1, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+    54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+}
+#bottom-cluster {
+  grid-area: 3/1/4/3;
+  margin: 0 auto;
+  text-align: center;
+}
+#bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#bottom-grid img {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  width: 100%;
+  max-width: max-content;
+  opacity: 0.5;
+  z-index: 1;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 auto;
+  padding: 10px;
+}
+#contact-info {
+  margin: 15px;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 2;
+  align-self: center;
+  background: rgba(255, 255, 255, 0.537);
+}
+footer {
+  padding: 1em;
+  text-align: center;
+  color: var(--headline-color-on-color);
+  background-image: var(--gradient1);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  box-shadow: 5px 5px 10px rgba(27, 29, 30, .5);
+}
+
+@media screen and (max-width: 900px) {
+  
+  .map-grid {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-image: none;
+  }
+  .grid-item {
+    display: block;
+  }
+  #tour-map {
+    margin: 0 auto;
+    border: none;
+  }
+  nav a, header a {
+    display: block;
+  }
+  #contact-grid {
+    display: block;
+  }
+  #about-photo {
+    display: none;
+  }
+  #bottom-grid {
+    display: inline;
+  }
+  #booking-grid {
+    display: block;
+  }
+
+  /* css rules for the scrollbar */
+}
+/* width */
+::-webkit-scrollbar {
+  width: 14px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--accent1-color); 
+  border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--gradient3); 
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient2); 
+}

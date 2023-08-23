@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compassion Tour</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/logo.png" class="logo" alt="logo">
+            <h2 class="grid-item header-title">Compassion Tour Home Page</h2>
+            <a href="about.html" class="transform-link grid-item header1">About Us</a>
+            <!-- Links under this tab (ALL CAPS): Mission, Bios, Contact Us, SticksandTones, PRESS PHOTOS, DONATE -->
+            <a class="transform-link grid-item header2">Q&A</a>
+            <a href="booking.html" class="transform-link grid-item header3">Booking</a>
+            <!-- PRICES, DATES, REFERALLS, MAP -->
+        </nav>
+    </header>
+    
+    <div class="map-grid">
+        <img id="background-image" class="grid-item" src="images/piano.optimize.jpg" alt="piano">
+        <img id="tour-map" class="grid-item" src="images/compassion_tour_map_locations2.png" alt="map of tour">
+        <div id="side" class="grid-item">
+          <h2>Compassion Tour</h2>
+          
+
+          <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'What')">What?</button>
+            <button class="tablinks" onclick="openCity(event, 'Where')">Where?</button>
+          </div>
+
+          <div id="What" class="tabcontent">
+            <p>Would you like to bring more music to your life and community? Let me introduce you to Henry and Maria Flurry -professional musicians touring the western states this summer in an effort to raise funds for the needy by providing a fund-raising opportunity (a concert) for religious congregations. They have successfully toured and performed before, and you can find out more about their past accomplishments, as well as more information about THIS summer's tour on their website: <br><a href="https://sticksandtones.com">Sticks and Tones</a><div class="br"></div>Henry and Maria flurry offer the compassion Tour as a way to raise funds for those in need. As they travel across the western states, congregations are able to invite their community to join the musical performances.
+          </div>
+
+            <div id="Where" class="tabcontent">
+              <p>Sticks and Tones will be in your state and possibly still available to perform a community-building fundraiser for people in need for your congregation:<br><br>
+
+                A- June 9-12 Los Angeles Area <br>
+                B- June 13-16 San Francisco Area<br>
+                C- June 17-18 Mendocino Area Area<br>
+                D- June 19-23 Lost Coast/Arcata Area<br>
+                E- June 24-26 Eugene, OR Area<br>
+                F- June 28-July 5 Portland, OR area<br>
+                July 6-10 Performance on the way to from Portland to Eugene, ID, <br>
+                G- July 11-13 Gigs between Boise and the state parks on the way to Glacier National Park (Montana)<br>
+                July 14 Gig on way to Glacier National Park<br>
+                H- July 15-20 Glacier National Park<br>
+                July 20-24 Gigs on the way from Glacier NP to YellowStone<br>
+                I- July 25-27 Yellow Stone<br>
+                July 28 Gigs on our way to Grand Teton area.<br>
+                J- July 31 - August 1 Grand Tetons<br>
+                K- August 2 - Zion NP<br>
+                L- August 3 - Flagstaff, AZ<br>
+                M- August 4-Prescott</p> 
+              </div>                 
+        </div>
+      </div>
+    
+    <footer>
+        <!-- social media, home, contact us, Q&A -->
+        <a class="transform-link" href="index.html">Home</a>
+        <a class="transform-link" href="booking.html">Booking</a>
+        <a class="transform-link" href="socialmedia.html">Join Us</a>
+        <a class="transform-link" href="about.html">About Us</a>
+        <a class="transform-link" href="https://jacob-packer.github.io/wdd130/week-1/index.html">Site Author: Jacob Packer</a>
+        <a class="transform-link" href="site-plan.html">Site Plan</a>
+        <p>2023&copy;</p>
+    </footer>
+    <script>
+      document.getElementsById("defaultOpen").click();
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+</body>
+</html>
